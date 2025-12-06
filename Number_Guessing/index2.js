@@ -4,6 +4,8 @@ console.log("Secret Number (for debugging):", secretNumber);
 const myInput = document.getElementById("guessInput");
 const myButton = document.getElementById("submitGuess");
 const myMessage = document.getElementById("message");
+
+
 function checkGuess(secretNumber, playerGuess, attemptsLeft) {
     if (playerGuess === secretNumber) {
         return { result: "correct", attemptsLeft: attemptsLeft };
@@ -16,9 +18,22 @@ function checkGuess(secretNumber, playerGuess, attemptsLeft) {
 
 myButton.addEventListener("click", function () {
     console.log("Button clicked");
+
     const playerGuess = parseInt(myInput.value, 10);
+    if (isNaN(playerGuess)) {
+        myMessage.textContent = "That's not a number!";
+        return;
+    }
+
+    if (playerGuess < 1 || playerGuess > 100) {
+        myMessage.textContent = "Please Enter Between 1 and 100";
+        return;
+    }
+
+
     const result = checkGuess(secretNumber, playerGuess, attemptsLeft);
     attemptsLeft = result.attemptsLeft;
+    
     if (result.result === "correct") {
         myMessage.textContent = "Congratulations! You've guessed the number!";
         myButton.disabled = true;
