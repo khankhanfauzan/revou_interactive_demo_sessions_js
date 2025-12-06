@@ -1,6 +1,3 @@
-
-
-
 const options = [{ text: 'rock', emoji: "🪨" }, { text: 'paper', emoji: "📄" }, { text: 'scissors', emoji: "✂️" }];
 const dropdowns = document.getElementById('playerChoice');
 const buttons = document.getElementById('playButton');
