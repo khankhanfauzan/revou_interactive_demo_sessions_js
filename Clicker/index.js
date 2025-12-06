@@ -1,4 +1,3 @@
-/ clicker game/script.js
 let score = 0;
 const timeLimit = 5; // seconds
 const scoreDisplay = document.getElementById("scoreDisplay");
