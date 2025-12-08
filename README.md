@@ -1,1 +1,5 @@
-# revou_interactive_demo_sessions_js
+# Team 3
+- Syifaa
+- Kamil
+- D'Rollin
+- Fauzan
